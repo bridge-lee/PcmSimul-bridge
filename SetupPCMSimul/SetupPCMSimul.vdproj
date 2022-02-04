@@ -595,15 +595,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:PCM Simulation"
-        "ProductCode" = "8:{C2045225-0D90-4487-AA9D-71058E09CCAB}"
-        "PackageCode" = "8:{F614687F-B00F-4200-8C1E-604B87065843}"
+        "ProductCode" = "8:{D6E1F80A-EC7D-4DD8-9547-7D462A42FFFD}"
+        "PackageCode" = "8:{74780582-5A6C-4367-9DD8-6E0F5C04F37D}"
         "UpgradeCode" = "8:{AC362E34-BFC1-4B7B-8610-B998761D0E3B}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:PCM Simulation"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1145,7 +1145,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0B667E1B7C3C4E8E8129C90F0E3ABD2E"
             {
-            "SourcePath" = "8:..\\PcmSimul\\obj\\Release\\PcmSimul.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EE9287ECB8CB4B958E86A1E15B823E63"
