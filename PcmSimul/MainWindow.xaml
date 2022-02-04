@@ -1,0 +1,132 @@
+﻿<Window x:Class="PcmSimul.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcmSimul"
+        xmlns:viewModel="clr-namespace:PcmSimul.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Height="700" Width="1100"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <!--<Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>-->
+
+    <Border Background="#322F45"
+            CornerRadius="10"
+            MouseDown="Border_MouseDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="DarkGray" BorderThickness="0,0,0,1" CornerRadius="10,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0 0" EndPoint="1 2">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.0" Color="#322F45" />
+                            <GradientStop Offset="0.7" Color="#4C4769" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <TextBlock Text="PCM Simulation"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
+                </Grid>
+            </Border>
+
+
+            <StackPanel Grid.Row="1" Background="#4C4769">
+                <RadioButton Content="지역구분"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Tag="{Binding Path=LocationVM.LocationValue}"
+                             Command="{Binding LocationViewCommand}"/>
+
+                <RadioButton Content="PCM 종류"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Tag="{Binding Path=PCMTypeVM.PCMTypeValue}"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding PCMTypeViewCommand}"/>
+
+                <RadioButton Content="부착위치"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Tag="{Binding Path=AttachVM.AttachValue}"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AttachViewCommand}"/>
+
+                <RadioButton Content="PCM 두께"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Tag="{Binding Path=PCMThkVM.PCMThkValue}"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding PCMThkViewCommand}"/>
+
+                <RadioButton Content="방위"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Tag="{Binding Path=DirectionVM.DirectionValue}"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding DirectionViewCommand}"/>
+
+                <RadioButton Content="계절"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Tag="{Binding Path=SeasonVM.SeasonValue}"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding SeasonViewCommand}"/>
+            </StackPanel>
+
+            <Border Grid.Column="1" BorderBrush="DarkGray" BorderThickness="0,0,0,1">
+                <Grid>
+                    <TextBlock Text="{Binding Description}"
+                       Width="Auto"
+                       Height="Auto"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       FontSize="15"
+                       Foreground="White"                       
+                       Margin="40,0,0,0"/>
+                </Grid>
+            </Border>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10,15,10,10"
+                            Content="{Binding CurrentView}"/>
+
+            <DockPanel Grid.Column="1" Margin="0,15,15,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <Grid x:Name="btClose" Margin="3" Background="#322F45" MouseDown="btClose_MouseDown">
+                    <Path Data="M0,0L17,17M17,0L0,17" Stroke="DarkGray" StrokeThickness="3"/>
+                </Grid>
+            </DockPanel>
+
+        </Grid>
+
+    </Border>
+
+</Window>

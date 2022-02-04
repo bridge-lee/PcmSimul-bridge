@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcmSimul", "PcmSimul\PcmSimul.csproj", "{332513F3-0EC2-4F8A-8ED8-17A35DE57128}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupPCMSimul", "SetupPCMSimul\SetupPCMSimul.vdproj", "{0F9143EE-825A-42DF-AC16-7B884367759F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332513F3-0EC2-4F8A-8ED8-17A35DE57128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332513F3-0EC2-4F8A-8ED8-17A35DE57128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332513F3-0EC2-4F8A-8ED8-17A35DE57128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332513F3-0EC2-4F8A-8ED8-17A35DE57128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F9143EE-825A-42DF-AC16-7B884367759F}.Debug|Any CPU.ActiveCfg = Debug
+		{0F9143EE-825A-42DF-AC16-7B884367759F}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A6A8A40-948F-49D1-A92B-0B4BDA44A7BA}
+	EndGlobalSection
+EndGlobal
